@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Twitterjobs</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+
+
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+  <div class="head col-md-9 ">
+    <h1>Tweeted Tech Jobs</h1>
+  </div>  
+  </div>
+</div>  
+
+<div class="container">
+
+  <div class="content row">
+      <div id= "left" class="col-md-3">
+        <h4>Popular Searches</h4>
+
+          <ul class="nav nav-pills nav-stacked" role="tablist">
+            
+
+            <li role="presentation"><%= link_to "Ruby on Rails", tweets_path(search: "Ruby on Rails") %></li>
+            <li role="presentation"><%= link_to "Ruby", tweets_path(search: "Ruby") %></li>
+            <li role="presentation"><%= link_to "Python", tweets_path(search: "Python") %></li>
+            <li role="presentation"><%= link_to "PHP", tweets_path(search: "PHP") %></li>
+            <li role="presentation"><%= link_to "Java", tweets_path(search: "Java") %></li>
+            <li role="presentation"><%= link_to "C#", tweets_path(search: "C#") %></li>
+            <li role="presentation"><%= link_to "Perl", tweets_path(search: "Perl") %></li>
+            <li role="presentation"><%= link_to "Django", tweets_path(search: "Django") %></li>
+            <li role="presentation"><%= link_to "NodeJS", tweets_path(search: "NodeJS") %></li>
+            <li role="presentation"><%= link_to "EmberJS", tweets_path(search: "EmberJS") %></li>
+            <li role="presentation"><%= link_to "HTML & CSS", tweets_path(search: "HTML & CSS") %></li>
+            <li role="presentation"><%= link_to "JavaScript", tweets_path(search: "JavaScript") %></li>
+            <li role="presentation"><%= link_to "jQuery", tweets_path(search: "jQuery") %></li>
+            <li role="presentation"><%= link_to "iOS", tweets_path(search: "iOS") %></li>
+            <li role="presentation"><%= link_to "Android", tweets_path(search: "Android") %></li>
+            <li role="presentation"><%= link_to "UX/UI", tweets_path(search: "UX/UI") %></li>
+            
+          </ul>
+      </div>
+
+<!--       <div id="left bottom" class="col-md-3">
+        <h4>About</h4>
+        
+      </div> -->
+
+      <div id="right" class="col-md-9">
+
+    	  <%= yield %>
+
+
+      </div>
+
+
+  </div>
+
+  <div class="row">
+    <div class="page-button col-md-9">
+      <%= paginate @tweet_id, :window => 1 %>
+    </div>
+  </div>
+
+</div> 
+  
+  
+
+
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>

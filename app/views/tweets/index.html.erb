@@ -1,0 +1,30 @@
+
+
+<form action= "<%= tweets_path %>" method="get" %>
+
+	<div class="form-group">
+
+		<%= text_field_tag :search, params[:search], placeholder: "Enter job search term", class: "form-control"  %>
+
+	</div>	
+
+</form>
+
+
+
+
+
+
+<% @tweet_id.each do |tweet| %>
+	<div class="col-md-4">
+	    <%= raw(twitter_client.oembed(tweet, omit_script: true, maxwidth: 250).html) %>
+	</div>
+
+<%end%>
+
+ 
+
+
+
+
+

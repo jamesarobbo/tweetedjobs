@@ -1,0 +1,35 @@
+class ApplicationController < ActionController::Base
+  # Prevent CSRF attacks by raising an exception.
+  # For APIs, you may want to use :null_session instead.
+  protect_from_forgery with: :exception
+
+  helper_method :twitter_client
+
+  before_filter :set_cache_headers
+   
+  private
+ 
+  def set_cache_headers
+    response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
+  end
+
+
+
+	def twitter_client
+
+		Twitter::REST::Client.new do |config|
+		  config.consumer_key        = ENV["TWITTER_CONSUMER_KEY"]
+		  config.consumer_secret     = ENV["TWITTER_CONSUMER_SECRET"]
+		  config.access_token        = ENV["TWITTER_ACCESS_TOKEN"]
+		  config.access_token_secret = ENV["TWITTER_ACCESS_SECRET"]
+		end
+
+	end
+
+  
+
+
+  
+end

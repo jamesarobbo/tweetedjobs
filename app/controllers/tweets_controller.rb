@@ -8,6 +8,8 @@ class TweetsController < ApplicationController
 
       @tweet_id = Kaminari.paginate_array(@tweets).page(params[:page]).per(10)
 
+
+
     else
 
       @tweets = twitter_client.search("technology job web").take(20).map {|t| t.id}

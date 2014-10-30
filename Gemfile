@@ -60,6 +60,12 @@ gem "figaro"
 
 gem "kaminari"
 
+group :development do
+
+	gem 'pg'
+	gem 'rails_12factor'
+
+end
 
 
 

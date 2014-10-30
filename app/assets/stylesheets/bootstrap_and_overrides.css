@@ -40,10 +40,6 @@ color:#eee;
 padding-bottom: 10px;
 }
 
-#left#bottom {
-  display: block;
-}
-
 #right {
 	float: right;
 }
@@ -89,6 +85,16 @@ form {
 .pagination span {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.about {
+  border:1px solid #2e2e2e;
+  border-radius: 4px;
+
+}
+.about h5 {
+  
+  line-height: 1.5;
 }
 
 

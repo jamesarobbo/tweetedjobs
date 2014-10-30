@@ -13,6 +13,10 @@
 
 <div class="container">
   <div class="row">
+
+  <div class="about col-md-3">
+    <h5>Built as a personal proof of concept. This app queries the Twitter REST API v1.1. Made by <%= link_to "James Robinson", "http://www.jamesarobinson.me" %>.  </h5>
+  </div> 
   <div class="head col-md-9 ">
     <h1>Tweeted Tech Jobs</h1>
   </div>  
@@ -22,6 +26,9 @@
 <div class="container">
 
   <div class="content row">
+
+
+
       <div id= "left" class="col-md-3">
         <h4>Popular Searches</h4>
 
@@ -46,12 +53,13 @@
             <li role="presentation"><%= link_to "UX/UI", tweets_path(search: "UX/UI") %></li>
             
           </ul>
-      </div>
 
-<!--       <div id="left bottom" class="col-md-3">
-        <h4>About</h4>
-        
-      </div> -->
+
+    
+
+
+    </div>  
+
 
       <div id="right" class="col-md-9">
 
@@ -65,9 +73,7 @@
 
   <div class="row">
 
-    <div class="about col-md-3">
-      <h5>Built as a personal proof of concept. This app queries the Twitter REST API v1.1.  </h5>
-    </div>
+
 
     <div class="page-button col-md-9">
       <%= paginate @tweet_id, :window => 1 %>

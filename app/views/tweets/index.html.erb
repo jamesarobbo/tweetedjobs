@@ -14,13 +14,18 @@
 
 
 
+  <div id="container" class="js-masonry" data-masonry-options='{ "itemSelector": ".item" }'>
+    <% @tweet_id.each do |tweet| %>
 
-<% @tweet_id.each do |tweet| %>
-	<div class="col-md-4">
-	    <%= raw(twitter_client.oembed(tweet, omit_script: true, maxwidth: 250).html) %>
-	</div>
+    	<div class="item col-md-4">
+    	    <%= raw(twitter_client.oembed(tweet, omit_script: true, maxwidth: 250).html) %>
+    	</div>
+    	
 
-<%end%>
+    <%end%>
+  </div>
+
+
 
 
 

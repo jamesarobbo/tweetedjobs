@@ -4,15 +4,15 @@ class TweetsController < ApplicationController
 
     if params[:search]
 
-      @tweets = twitter_client.search("#{params[:search]}+jobs").take(60).map {|t| t.id}
+      @tweets = twitter_client.search("#{params[:search]}+jobs").take(20).map {|t| t.id}
 
-      @tweet_id = Kaminari.paginate_array(@tweets).page(params[:page]).per(20)
+      @tweet_id = Kaminari.paginate_array(@tweets).page(params[:page]).per(10)
 
     else
 
-      @tweets = twitter_client.search("technology job web").take(60).map {|t| t.id}
+      @tweets = twitter_client.search("technology job web").take(20).map {|t| t.id}
 
-      @tweet_id = Kaminari.paginate_array(@tweets).page(params[:page]).per(20)
+      @tweet_id = Kaminari.paginate_array(@tweets).page(params[:page]).per(10)
 
   
     end  

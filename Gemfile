@@ -60,7 +60,7 @@ gem "figaro"
 
 gem "kaminari"
 
-group :development do
+group :production do
 
 	gem 'pg'
 	gem 'rails_12factor'

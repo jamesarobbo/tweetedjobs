@@ -27,7 +27,7 @@ h1 {
 }
 
 h4 {
-  color:#eee;
+  color:#2e2e2e;
   margin-left: 14px;
 }
 
@@ -36,9 +36,8 @@ float: left;
 clear: both;
 border:1px solid #2e2e2e;
 border-radius: 4px;
-background-color: #2e2e2e;
-color:#eee;
 padding-bottom: 10px;
+margin-bottom: 25px;
 }
 
 #right {
@@ -46,7 +45,7 @@ padding-bottom: 10px;
 }
 
 .nav-pills>li>a {
-  color: #eee;
+  color:#2e2e2e;
 }
 
 .nav-pills>li>a:hover {
@@ -72,8 +71,12 @@ form {
   padding-bottom: 20px;
 }
 
+#container {
+  overflow: hidden;
+}
+
 .item {
-  width:280px;
+  width:420px;
 }
 
 .page-button {
@@ -99,6 +102,16 @@ form {
 
 }
 .about h5 {
+  line-height: 1.5;
+}
+
+.limit {
+  border:1px solid #2e2e2e;
+  border-radius: 4px;
+
+}
+
+.limit h4 {
   line-height: 1.5;
 }
 

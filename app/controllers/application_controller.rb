@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   helper_method :twitter_client
 
+  
+
 
 
 	def twitter_client
@@ -17,6 +19,7 @@ class ApplicationController < ActionController::Base
 		end
 
 	end
+
 
   
 

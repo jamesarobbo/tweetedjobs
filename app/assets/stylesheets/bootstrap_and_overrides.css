@@ -38,6 +38,7 @@ border:1px solid #2e2e2e;
 border-radius: 4px;
 padding-bottom: 10px;
 margin-bottom: 25px;
+
 }
 
 #right {
@@ -81,7 +82,7 @@ form {
 
 .page-button {
   text-align: center;
-  float: right;
+  
 }
 
 .pagination {

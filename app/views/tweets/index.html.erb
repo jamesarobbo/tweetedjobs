@@ -14,7 +14,7 @@
 
 
 
-  <div id="container" >
+  <div id="container">
     <% @tweet_id.each do |tweet| %>
 
     	<div class="item col-md-4">
@@ -23,6 +23,15 @@
     	
 
     <%end%>
+  </div>
+
+    <div class="row">
+
+
+
+    <div class="page-button col-md-9 col-md-offset-1">
+      <%= paginate @tweet_id, :window => 1 %>
+    </div>
   </div>
 
 

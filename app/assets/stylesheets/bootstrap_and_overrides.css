@@ -116,6 +116,11 @@ form {
   line-height: 1.5;
 }
 
+.no-results {
+margin-top: 15px;
+  text-align: center;
+}
+
 
 
 
